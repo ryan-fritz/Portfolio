@@ -4,38 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <!-- Include CSS styles -->
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Font Awesome for social media icons -->
+    <!-- Include Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
+    <!-- Header with navigation -->
     <header>
+        <!-- Navigation menu -->
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="hero">
+
+    <!-- Hero section -->
+    <section id="hero">
+        <div class="hero-content">
             <h1>Welcome to My Portfolio</h1>
             <p>Discover my projects and experience.</p>
-        </section>
-        <section class="featured-projects">
+            <a href="#projects" class="btn">View Projects</a>
+        </div>
+    </section>
+
+    <!-- About section -->
+    <section id="about">
+        <div class="about-content">
+            <h2>About Me</h2>
+            <p>Some information about you...</p>
+        </div>
+    </section>
+
+    <!-- Projects section -->
+    <section id="projects">
+        <div class="projects-content">
             <h2>Featured Projects</h2>
-            <!-- Add your project details here -->
-        </section>
-    </main>
+            <!-- Showcase your projects here -->
+        </div>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact">
+        <div class="contact-content">
+            <h2>Contact Me</h2>
+            <!-- Add a contact form or contact information -->
+        </div>
+    </section>
+
+    <!-- Social media icons -->
     <div class="social-media">
-        <a href="https://www.linkedin.com/in/ryan-fritz-9212b9187/"><i class="fab fa-linkedin fa-2x"></i></a>
-        <a href="https://twitter.com/R2Fritz"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href="https://www.linkedin.com/in/yourprofile"><i class="fab fa-linkedin fa-2x"></i></a>
+        <a href="https://twitter.com/yourprofile"><i class="fab fa-twitter fa-2x"></i></a>
     </div>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 My Portfolio</p>
     </footer>
+
+    <!-- Include JavaScript files -->
     <script src="js/scripts.js"></script>
 </body>
 </html>
