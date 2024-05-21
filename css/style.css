@@ -17,7 +17,12 @@ header {
 
 .navbar {
     background-color: #343a40; /* Dark gray navbar background */
+    color: #fff; /* White text color */
     padding: 1em 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
 }
 
 .navbar ul {
@@ -26,8 +31,8 @@ header {
 }
 
 .navbar ul li {
-    display: inline;
-    margin: 0 1em;
+    display: block;
+    margin: 1em 0;
 }
 
 .navbar ul li a {
@@ -43,7 +48,7 @@ header {
 
 /* Hero Section Styles */
 #hero {
-    background-color: #f8f9fa;
+    background-color: #f8f9fa; /* Light blue hero background */
     padding: 2em 0;
     text-align: center;
 }
@@ -59,7 +64,7 @@ header {
 
 /* About Section Styles */
 #about {
-    background-color: #fff;
+    background-color: #fff; /* White background */
     padding: 2em;
     text-align: center;
 }
