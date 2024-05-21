@@ -5,63 +5,60 @@ body {
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    margin: 0;
-    padding: 0;
 }
 
 /* Navigation bar */
 nav {
-    background-color: #343a40; /* Dark grey background */
+    background-color: #333333; /* Dark grey */
     color: #ffffff;
     font-size: 18px;
-    height: 100vh; /* Full height */
-    width: 250px; /* Fixed width */
+    height: 60px;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
     z-index: 999;
-    padding-top: 20px;
-    padding-left: 10px;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
+    display: flex;
     margin: 0;
-    width: 100%;
+    padding: 0;
+    list-style: none;
 }
 
 nav ul li {
-    margin-bottom: 20px;
-    width: 100%;
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
 }
 
 nav ul li a {
     display: block;
-    padding: 10px 20px;
+    padding: 0 10px;
     text-decoration: none;
     color: #ffffff;
+    height: 60px;
+    line-height: 60px;
     transition: background-color 0.3s ease;
-    width: calc(100% - 40px);
-    box-sizing: border-box;
 }
 
 nav ul li a:hover {
-    background-color: #007bff; /* Light blue on hover */
-    border-radius: 4px;
+    background-color: #1c6ca9; /* Darker shade of light blue */
 }
 
 nav ul li.active a {
-    background-color: #ffc107;
+    background-color: #1c6ca9; /* Darker shade of light blue */
 }
 
+/* Header */
 header {
-    margin-left: 250px; /* Margin to make room for the navigation bar */
-    background-color: #2980b9; /* Light blue background */
+    background-color: #2980b9; /* Light blue */
     color: #ffffff;
     padding: 50px;
     text-align: center;
@@ -73,7 +70,7 @@ h1 {
 }
 
 h2 {
-    color: #2980b9; /* Light blue color */
+    color: #2980b9; /* Light blue */
     font-size: 2em;
     margin-top: 50px;
 }
@@ -94,7 +91,7 @@ li {
 }
 
 a {
-    color: #2980b9; /* Light blue color */
+    color: #2980b9; /* Light blue */
     text-decoration: none;
 }
 
@@ -102,6 +99,7 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Circle Image */
 .img-circle {
     border-radius: 50%;
     overflow: hidden;
@@ -115,9 +113,10 @@ a:hover {
     height: auto;
     border-radius: 50%;
     border: 3px solid white;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Form Styles */
 form {
     display: flex;
     flex-direction: column;
@@ -142,7 +141,7 @@ textarea {
 }
 
 button[type=submit] {
-    background-color: #2980b9; /* Light blue background */
+    background-color: #2980b9; /* Light blue */
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -153,22 +152,14 @@ button[type=submit] {
 }
 
 button[type=submit]:hover {
-    background-color: #1c6ca9;
+    background-color: #1c6ca9; /* Darker shade of light blue */
 }
 
+/* Social Media Styles */
 .social-media {
     font-size: 1.2em;
-    margin-left: 250px; /* Margin to make room for the navigation bar */
-    padding: 20px;
 }
 
-footer {
-    background-color: #343a40; /* Dark grey background */
-    color: #ffffff;
-    text-align: center;
-    padding: 1em 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    margin-left: 250px; /* Margin to make room for the navigation bar */
+nav + * {
+    margin-top: 60px; /* To offset the fixed navbar height */
 }
