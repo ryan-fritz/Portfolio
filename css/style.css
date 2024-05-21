@@ -73,3 +73,65 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Navbar Styles */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Hero Section Styles */
+#hero {
+    background-color: #f8f9fa;
+    padding: 2em 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    margin: 0;
+}
+
+/* About Section Styles */
+#about {
+    background-color: #fff;
+    padding: 2em;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Social Media Styles */
+.social-media {
+    text-align: center;
+    padding: 1em 0;
+}
