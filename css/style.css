@@ -15,71 +15,9 @@ header {
     text-align: center;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 1em;
-}
-
-nav ul li a {
-    color: #fff; /* White navigation text color */
-    text-decoration: none;
-}
-
-/* Hero Section Styles */
-.hero {
-    background: #e9ecef; /* Light blue hero background */
-    padding: 2em 0;
-    text-align: center;
-}
-
-.hero h1 {
-    margin: 0;
-}
-
-/* Featured Projects Styles */
-.featured-projects {
-    padding: 2em;
-    text-align: center;
-}
-
-/* Social Media Styles */
-.social-media {
-    text-align: center;
-    padding: 1em 0;
-}
-
-.social-media a {
-    margin: 0 1em;
-    color: #333; /* Dark gray social media icon color */
-    text-decoration: none;
-}
-
-.social-media a:hover {
-    color: #007bff; /* Light blue social media icon color on hover */
-}
-
-/* Footer Styles */
-footer {
-    background-color: #343a40; /* Dark gray footer background */
-    color: #fff; /* White text color */
-    text-align: center;
-    padding: 1em 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Navbar Styles */
 .navbar {
-    background-color: #333;
-    color: #fff;
+    background-color: #343a40; /* Dark gray navbar background */
     padding: 1em 0;
-    text-align: center;
 }
 
 .navbar ul {
@@ -93,8 +31,14 @@ footer {
 }
 
 .navbar ul li a {
-    color: #fff;
+    color: #fff; /* White navigation text color */
     text-decoration: none;
+    padding: 0.5em 1em;
+}
+
+.navbar ul li a:hover {
+    background-color: #555; /* Darker gray on hover */
+    border-radius: 4px; /* Rounded corners on hover */
 }
 
 /* Hero Section Styles */
@@ -134,4 +78,25 @@ footer {
 .social-media {
     text-align: center;
     padding: 1em 0;
+}
+
+.social-media a {
+    margin: 0 1em;
+    color: #333; /* Dark gray social media icon color */
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #007bff; /* Light blue social media icon color on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #343a40; /* Dark gray footer background */
+    color: #fff; /* White text color */
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
