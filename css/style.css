@@ -1,107 +1,161 @@
-/* General Styles */
+/* Global styles */
 body {
+    background-color: #ffffff;
+    color: #333333;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa; /* Light gray background */
-    color: #333; /* Dark gray text color */
-}
-
-/* Header Styles */
-header {
-    background-color: #343a40; /* Dark gray header background */
-    color: #fff; /* White text color */
-    padding: 1em 0;
-    text-align: center;
-}
-
-.navbar {
-    background-color: #343a40; /* Dark gray navbar background */
-    color: #fff; /* White text color */
-    padding: 1em 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Navigation bar */
+  nav {
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 18px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
-    left: 0;
     top: 0;
-    bottom: 0;
-}
-
-.navbar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.navbar ul li {
-    display: block;
-    margin: 1em 0;
-}
-
-.navbar ul li a {
-    color: #fff; /* White navigation text color */
-    text-decoration: none;
-    padding: 0.5em 1em;
-}
-
-.navbar ul li a:hover {
-    background-color: #555; /* Darker gray on hover */
-    border-radius: 4px; /* Rounded corners on hover */
-}
-
-/* Hero Section Styles */
-#hero {
-    background-color: #f8f9fa; /* Light blue hero background */
-    padding: 2em 0;
-    text-align: center;
-}
-
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.hero-content h1 {
-    margin: 0;
-}
-
-/* About Section Styles */
-#about {
-    background-color: #fff; /* White background */
-    padding: 2em;
-    text-align: center;
-}
-
-.about-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.about-content img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Social Media Styles */
-.social-media {
-    text-align: center;
-    padding: 1em 0;
-}
-
-.social-media a {
-    margin: 0 1em;
-    color: #333; /* Dark gray social media icon color */
-    text-decoration: none;
-}
-
-.social-media a:hover {
-    color: #007bff; /* Light blue social media icon color on hover */
-}
-
-/* Footer Styles */
-footer {
-    background-color: #343a40; /* Dark gray footer background */
-    color: #fff; /* White text color */
-    text-align: center;
-    padding: 1em 0;
-    position: fixed;
-    bottom: 0;
+    left: 0;
     width: 100%;
-}
+    z-index: 999;
+  }
+  
+  nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+  
+  nav ul li a {
+    display: block;
+    padding: 0 10px;
+    text-decoration: none;
+    color: #ffffff;
+    height: 60px;
+    line-height: 60px;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    background-color: #ffc107;
+  }
+  
+  nav ul li.active a {
+    background-color: #ffc107;
+  }
+  
+  header {
+    background-color: #2980b9;
+    color: #ffffff;
+    padding: 50px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 3em;
+    margin: 0;
+  }
+  
+  h2 {
+    color: #2980b9;
+    font-size: 2em;
+    margin-top: 50px;
+  }
+  
+  p {
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  a {
+    color: #2980b9;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .img-circle {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  
+  .img-circle img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  }
+  
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-size: 1.2em;
+    margin-top: 20px;
+  }
+  
+  input[type=text], input[type=email], textarea {
+    padding: 10px;
+    font-size: 1.2em;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  textarea {
+    height: 150px;
+  }
+  
+  button[type=submit] {
+    background-color: #2980b9;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button[type=submit]:hover {
+    background-color: #1c6ca9;
+  }
+  
+  .social-media {
+    font-size: 1.2em;
+  }
+  
+  /* Custom styles for personal portfolio */
+  nav + * {
