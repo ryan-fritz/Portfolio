@@ -46,6 +46,22 @@ nav ul li a {
     text-align: center;
 }
 
+/* Social Media Styles */
+.social-media {
+    text-align: center;
+    padding: 1em 0;
+}
+
+.social-media a {
+    margin: 0 1em;
+    color: #333;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #0073b1; /* LinkedIn blue for hover effect */
+}
+
 /* Footer Styles */
 footer {
     background-color: #333;
@@ -55,48 +71,4 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-}
-
-/* About Me Styles */
-.about-me {
-    padding: 2em;
-    text-align: center;
-}
-
-/* Projects Styles */
-.projects {
-    padding: 2em;
-    text-align: center;
-}
-
-/* Contact Styles */
-.contact {
-    padding: 2em;
-    text-align: center;
-}
-
-.contact form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contact form label {
-    margin: 0.5em 0 0.2em;
-}
-
-.contact form input,
-.contact form textarea {
-    margin-bottom: 1em;
-    padding: 0.5em;
-    width: 100%;
-    max-width: 400px;
-}
-
-.contact form button {
-    padding: 0.5em 2em;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
 }
