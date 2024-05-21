@@ -1,2 +1,2 @@
 # Portfolio
- personal portfolio/creative project
+ personal portfolio creative project
