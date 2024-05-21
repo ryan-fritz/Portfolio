@@ -3,13 +3,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f8f9fa; /* Light gray background */
+    color: #333; /* Dark gray text color */
 }
 
 /* Header Styles */
 header {
-    background-color: #333;
-    color: white;
+    background-color: #343a40; /* Dark gray header background */
+    color: #fff; /* White text color */
     padding: 1em 0;
     text-align: center;
 }
@@ -25,13 +26,13 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #fff; /* White navigation text color */
     text-decoration: none;
 }
 
 /* Hero Section Styles */
 .hero {
-    background: #eee;
+    background: #e9ecef; /* Light blue hero background */
     padding: 2em 0;
     text-align: center;
 }
@@ -54,18 +55,18 @@ nav ul li a {
 
 .social-media a {
     margin: 0 1em;
-    color: #333;
+    color: #333; /* Dark gray social media icon color */
     text-decoration: none;
 }
 
 .social-media a:hover {
-    color: #0073b1; /* LinkedIn blue for hover effect */
+    color: #007bff; /* Light blue social media icon color on hover */
 }
 
 /* Footer Styles */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #343a40; /* Dark gray footer background */
+    color: #fff; /* White text color */
     text-align: center;
     padding: 1em 0;
     position: fixed;
