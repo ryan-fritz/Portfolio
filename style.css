@@ -1,0 +1,68 @@
+/* General body styles */
+body {
+    font-family: 'Muli', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Ensures the navigation bar text stands out */
+.navbar-dark .navbar-nav .nav-link {
+    color: #f8f9fa;
+    font-weight: bold;
+}
+
+/* Custom styles for the brand/logo area */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+/* Profile picture styling */
+.img-profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+/* Section heading styles */
+.resume-section h2 {
+    font-size: 2rem;
+    color: #495057;
+}
+
+/* Details in sections */
+.resume-section-content {
+    padding: 2rem;
+}
+
+/* Link styling */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Button customization if needed */
+.button-custom {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.button-custom:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        background-color: #343a40;
+    }
+}
