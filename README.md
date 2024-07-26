@@ -1,6 +1,6 @@
-# My Portfolio
+# My Personal Website
 
-This is my personal portfolio website where I showcase my projects and experience.
+This is my personal website where I display my interests and accumulated experiences within neuroscience. 
 
 ## Pages
 
@@ -15,10 +15,9 @@ This is my personal portfolio website where I showcase my projects and experienc
 - CSS
 - JavaScript
 
-## Setup
+## Imports
 
-1. Clone the repository: `git clone https://github.com/yourusername/your-repo-name.git`
-2. Open the index.html file in your browser to view the site.
+-Bootstrap
 
 ## License
 
