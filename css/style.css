@@ -148,15 +148,13 @@ body {
     width: 100%;
     height: 100%;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    transform: rotate(-30deg);
 }
 
 .circle-container li {
     position: absolute;
-    transform-origin: center;
+    transform-origin: 150px 150px; /* Center of the container */
     text-align: center;
     transition: transform 0.25s;
 }
