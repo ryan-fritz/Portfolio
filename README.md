@@ -1,13 +1,15 @@
 # My Personal Website
 
-This is my personal website where I display my interests and accumulated experiences within neuroscience. 
+This is my personal website where I display my interests and accumulated experiences within neuroscience.
 
 ## Pages
 
 - **Home**: Introduction and featured projects.
 - **About**: Information about me.
-- **Projects**: Detailed showcase of my projects.
-- **Contact**: Contact form to reach me.
+- **Education**: My educational background.
+- **Skills**: My professional skills.
+- **Current Interests**: Areas of interest and focus within neuroscience.
+- **Projects/Sandbox**: Detailed showcase of my projects and experiments.
 
 ## Technologies Used
 
@@ -15,10 +17,8 @@ This is my personal website where I display my interests and accumulated experie
 - CSS
 - JavaScript
 
-## Imports
+## Functionality
 
--Bootstrap
+### Dynamic Content Loading
 
-## License
-
-This project is licensed under the MIT License
+The website dynamically loads content for different sections to keep the main page concise and improve performance. This is achieved using JavaScript, which fetches and inserts HTML content into designated placeholders.
