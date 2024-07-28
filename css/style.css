@@ -94,7 +94,15 @@ a:hover {
     background-color: #f8f9fa;
 }
 
-/* Responsive adjustments */
+/* Offset for smooth scrolling */
+html, body {
+    scroll-behavior: smooth;
+}
+
+.resume-section {
+    padding-top: 100px; /* Adjust this value if your navbar height changes */
+}
+
 @media (max-width: 768px) {
     .navbar {
         background-color: #343a40;
