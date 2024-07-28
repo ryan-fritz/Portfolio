@@ -25,7 +25,7 @@ body {
 }
 
 /* Section heading styles */
-.resume-section h2 {
+.resume-section h2, .resume-section h1 {
     font-size: 2rem;
     color: #495057;
 }
