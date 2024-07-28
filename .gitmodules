@@ -1,0 +1,3 @@
+[submodule "vendor/vendor/startbootstrap-resume"]
+	path = vendor/vendor/startbootstrap-resume
+	url = https://github.com/startbootstrap/startbootstrap-resume.git
