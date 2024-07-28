@@ -5,106 +5,213 @@ body {
     color: #333;
 }
 
-/* Ensures the navigation bar text stands out */
-.navbar-dark .navbar-nav .nav-link {
-    color: #f8f9fa;
-    font-weight: bold;
+/* Navbar styles */
+.navbar {
+    padding: 0.25rem 0.5rem; /* Reduce the padding to make the navbar shorter */
+    height: 56px; /* Set a fixed height for the navbar */
 }
 
-/* Custom styles for the brand/logo area */
 .navbar-brand {
     display: flex;
     align-items: center;
 }
 
+.navbar-brand img {
+    width: 100px; /* Make the profile picture smaller */
+    height: auto;
+    border-radius: 50%;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #f8f9fa;
+    font-weight: bold;
+    font-size: 0.9rem; /* Make the font size smaller */
+}
+
+.navbar-toggler {
+    border: none;
+}
+
 /* Profile picture styling */
 .img-profile {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
 }
 
 /* Section heading styles */
-.resume-section h2, .resume-section h1 {
+.resume-section h2, .resume-section h3 {
     font-size: 2rem;
     color: #495057;
 }
 
-/* Details in sections */
+/* Section content padding */
 .resume-section-content {
     padding: 2rem;
 }
 
-/* Link styling */
-a {
-    color: #007bff;
-    text-decoration: none;
+/* Add margin to top of sections to prevent overlap with navbar */
+.resume-section {
+    margin-top: 70px;
 }
 
-a:hover {
-    color: #0056b3;
-    text-decoration: underline;
+/* Flexbox utilities */
+.flex-grow-1 {
+    flex-grow: 1;
 }
 
-/* Button customization if needed */
-.button-custom {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
+.flex-shrink-0 {
+    flex-shrink: 0;
 }
 
-.button-custom:hover {
-    background-color: #0056b3;
+/* Text color utilities */
+.text-primary {
+    color: #007bff !important;
 }
 
-/* Word Cloud Styles */
-.word-cloud {
-    text-align: center;
-    margin-top: 2rem;
+.text-muted {
+    color: #6c757d !important;
 }
 
-.word-cloud .word {
-    display: inline-block;
-    margin: 0.5rem;
-    padding: 0.5rem;
-    border-radius: 5px;
-    transition: transform 0.2s;
+/* Margin bottom utilities */
+.mb-0 {
+    margin-bottom: 0 !important;
 }
 
-.word-cloud .large {
-    font-size: 2.5rem;
-    color: #007bff;
+.mb-2 {
+    margin-bottom: 0.5rem !important;
 }
 
-.word-cloud .medium {
-    font-size: 2rem;
-    color: #28a745;
+.mb-3 {
+    margin-bottom: 1rem !important;
 }
 
-.word-cloud .small {
-    font-size: 1.5rem;
-    color: #17a2b8;
+.mb-5 {
+    margin-bottom: 3rem !important;
 }
 
-.word-cloud .word:hover {
-    transform: scale(1.1);
-    background-color: #f8f9fa;
+/* Flexbox layout */
+.d-flex {
+    display: flex !important;
+}
+
+.flex-column {
+    flex-direction: column !important;
+}
+
+.flex-md-row {
+    flex-direction: row !important;
+}
+
+.justify-content-between {
+    justify-content: space-between !important;
+}
+
+.align-items-center {
+    align-items: center !important;
+}
+
+/* Typography utilities */
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+/* Image styling */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.rounded {
+    border-radius: 0.25rem !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+/* Tag Cloud Styles */
+html, body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul.cloud {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  line-height: 2.75rem;
+  width: 450px;
+}
+
+ul.cloud a {
+  --size: 4;
+  --color: #a33;
+  color: var(--color);
+  font-size: calc(var(--size) * 0.25rem + 0.5rem);
+  display: block;
+  padding: 0.125rem 0.25rem;
+  position: relative;
+  text-decoration: none;
+}
+
+ul.cloud a[data-weight="1"] { --size: 1; }
+ul.cloud a[data-weight="2"] { --size: 2; }
+ul.cloud a[data-weight="3"] { --size: 3; }
+ul.cloud a[data-weight="4"] { --size: 4; }
+ul.cloud a[data-weight="5"] { --size: 6; }
+ul.cloud a[data-weight="6"] { --size: 8; }
+ul.cloud a[data-weight="7"] { --size: 10; }
+ul.cloud a[data-weight="8"] { --size: 13; }
+ul.cloud a[data-weight="9"] { --size: 16; }
+
+ul[data-show-value] a::after {
+  content: " (" attr(data-weight) ")";
+  font-size: 1rem;
+}
+
+ul.cloud li:nth-child(2n+1) a { --color: #181; }
+ul.cloud li:nth-child(3n+1) a { --color: #33a; }
+ul.cloud li:nth-child(4n+1) a { --color: #c38; }
+
+ul.cloud a:focus {
+  outline: 1px dashed;
+}
+
+ul.cloud a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  background: var(--color);
+  transform: translate(-50%, 0);
+  opacity: 0.15;
+  transition: width 0.25s;
+}
+
+ul.cloud a:focus::before,
+ul.cloud a:hover::before {
+  width: 100%;
+}
+
+@media (prefers-reduced-motion) {
+  ul.cloud * {
+    transition: none !important;
+  }
 }
 
 /* Offset for smooth scrolling */
 html, body {
     scroll-behavior: smooth;
-}
-
-.resume-section {
-    padding-top: 100px; /* Adjust this value if your navbar height changes */
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        background-color: #343a40;
-    }
 }
