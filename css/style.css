@@ -60,6 +60,40 @@ a:hover {
     background-color: #0056b3;
 }
 
+/* Word Cloud Styles */
+.word-cloud {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.word-cloud .word {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.word-cloud .large {
+    font-size: 2.5rem;
+    color: #007bff;
+}
+
+.word-cloud .medium {
+    font-size: 2rem;
+    color: #28a745;
+}
+
+.word-cloud .small {
+    font-size: 1.5rem;
+    color: #17a2b8;
+}
+
+.word-cloud .word:hover {
+    transform: scale(1.1);
+    background-color: #f8f9fa;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .navbar {
