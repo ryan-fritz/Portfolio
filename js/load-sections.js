@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
         { id: 'about-placeholder', url: 'about.html' },
         { id: 'education-placeholder', url: 'education.html' },
         { id: 'skills-placeholder', url: 'skills.html' },
-        { id: 'interests-placeholder', url: 'interests.html' },
         { id: 'projects-placeholder', url: 'projects.html' },
+        { id: 'interests-placeholder', url: 'interests.html' },
     ];
 
     sections.forEach(section => {

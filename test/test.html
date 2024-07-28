@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Current Interests - Ryan Fritz</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Tag Cloud Styles */
+        .tagcloud {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.75rem; /* Decrease line height to bring words closer */
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            text-decoration: none;
+            transition: transform 0.3s, color 0.3s;
+            margin: 3px; /* Decrease margin to reduce spacing */
+        }
+
+        .tag[data-weight="10"] { font-size: 2rem; }
+        .tag[data-weight="9"] { font-size: 1.8rem; }
+        .tag[data-weight="8"] { font-size: 1.6rem; }
+        .tag[data-weight="7"] { font-size: 1.4rem; }
+        .tag[data-weight="6"] { font-size: 1.2rem; }
+        .tag[data-weight="5"] { font-size: 1rem; }
+        .tag[data-weight="4"] { font-size: 0.9rem; }
+
+        .tag:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body id="page-top">
+    <!-- Main Content -->
+    <div class="container-fluid p-0" style="height: 100vh; display: flex; align-items: center;">
+        <section class="resume-section" id="interests">
+            <div class="resume-section-content">
+                <h2 class="mb-3">Current Interests</h2>
+                <div class="tagcloud">
+                    <span class="tag" data-weight="10">Cognitive Neuroscience</span>
+                    <span class="tag" data-weight="9">Neuroplasticity</span>
+                    <span class="tag" data-weight="8">Functional Connectivity</span>
+                    <span class="tag" data-weight="7">Neuromodulation</span>
+                    <span class="tag" data-weight="6">Neuroimaging</span>
+                    <span class="tag" data-weight="5">Neuropharmacology</span>
+                    <span class="tag" data-weight="5">Neural Networks</span>
+                    <span class="tag" data-weight="7">Memory Consolidation</span>
+                    <span class="tag" data-weight="9">Deep Brain Stimulation</span>
+                    <span class="tag" data-weight="8">Transcranial Magnetic Stimulation (TMS)</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const tags = document.querySelectorAll('.tag');
+            tags.forEach(tag => {
+                tag.style.color = getRandomColor();
+            });
+        });
+    </script>
+</body>
+</html>

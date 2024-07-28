@@ -6,14 +6,79 @@
     <title>Current Interests - Ryan Fritz</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Tag Cloud Styles */
+        .tagcloud {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.75rem; /* Decrease line height to bring words closer */
+            width: 100%;
+            margin-top: 0.5rem; /* Reduce margin top */
+        }
+
+        .tag {
+            text-decoration: none;
+            transition: transform 0.3s, color 0.3s;
+            margin: 3px; /* Decrease margin to reduce spacing */
+        }
+
+        .tag[data-weight="10"] { font-size: 2rem; }
+        .tag[data-weight="9"] { font-size: 1.8rem; }
+        .tag[data-weight="8"] { font-size: 1.6rem; }
+        .tag[data-weight="7"] { font-size: 1.4rem; }
+        .tag[data-weight="6"] { font-size: 1.2rem; }
+        .tag[data-weight="5"] { font-size: 1rem; }
+        .tag[data-weight="4"] { font-size: 0.9rem; }
+
+        .tag:hover {
+            transform: scale(1.1);
+        }
+
+        .paper {
+            margin-top: 2rem;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+
+        .paper-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .paper-authors {
+            font-size: 1rem;
+            font-style: italic;
+            color: #6c757d;
+        }
+
+        .paper-link {
+            font-size: 1rem;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .paper-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Remove excessive padding/margin around sections */
+        section.resume-section {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+    </style>
 </head>
 <body id="page-top">
     <!-- Main Content -->
-    <div class="container-fluid p-0">
+    <div class="container-fluid p-0" style="height: 100vh; display: flex; flex-direction: column; justify-content: center;">
         <section class="resume-section" id="interests">
             <div class="resume-section-content">
-                <h2 class="mb-5">Current Interests</h2>
-                <div class="tagcloud">
+                <h2 class="mb-3">Current Interests</h2>
+                <div class="tagcloud" id="tagcloud">
                     <span class="tag" data-weight="10">Cognitive Neuroscience</span>
                     <span class="tag" data-weight="9">Neuroplasticity</span>
                     <span class="tag" data-weight="8">Functional Connectivity</span>
@@ -21,12 +86,66 @@
                     <span class="tag" data-weight="6">Neuroimaging</span>
                     <span class="tag" data-weight="5">Neuropharmacology</span>
                     <span class="tag" data-weight="5">Neural Networks</span>
-                    <span class="tag" data-weight="4">Brain-Computer Interface (BCI)</span>
-                    <span class="tag" data-weight="4">Behavioral Neuroscience</span>
+                    <span class="tag" data-weight="7">Memory Consolidation</span>
+                    <span class="tag" data-weight="9">Deep Brain Stimulation</span>
                     <span class="tag" data-weight="8">Transcranial Magnetic Stimulation (TMS)</span>
                 </div>
             </div>
         </section>
+        
+        <section class="resume-section" id="favorite-papers">
+            <div class="resume-section-content">
+                <h2 class="mb-3">Top 3 Favorite Papers</h2>
+                
+                <div class="paper">
+                    <div class="paper-title">Distinct Symptom-Specific Treatment Targets for Circuit-Based Neuromodulation</div>
+                    <div class="paper-authors">Authors: Shan H. Siddiqi, et al., Michael D. Fox</div>
+                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8396109/" class="paper-link" target="_blank">Read the full paper</a>
+                </div>
+                
+                <div class="paper">
+                    <div class="paper-title">Psilocybin with psychological support for treatment-resistant depression: an open-label feasibility study</div>
+                    <div class="paper-authors">Authors: Robin L Carhart-Harris, et al., David J Nutt</div>
+                    <a href="https://www.thelancet.com/journals/lanpsy/article/PIIS2215-0366(16)30065-7/fulltext?cc=y=" class="paper-link" target="_blank">Read the full paper</a>
+                </div>
+                
+                <div class="paper">
+                    <div class="paper-title">Accurate and robust brain image alignment using boundary-based registration</div>
+                    <div class="paper-authors">Authors: Douglas N. Greve, Bruce Fischl</div>
+                    <a href="https://www.sciencedirect.com/science/article/abs/pii/S1053811909006752?via%3Dihub" class="paper-link" target="_blank">Read the full paper</a>
+                </div>
+                
+            </div>
+        </section>
     </div>
+
+    <script>
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const tagcloud = document.getElementById('tagcloud');
+            const tags = Array.from(tagcloud.getElementsByClassName('tag'));
+            shuffleArray(tags);
+            tagcloud.innerHTML = '';
+            tags.forEach(tag => {
+                tag.style.color = getRandomColor();
+                tagcloud.appendChild(tag);
+            });
+        });
+    </script>
 </body>
 </html>
