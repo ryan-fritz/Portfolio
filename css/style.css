@@ -13,14 +13,7 @@ body {
 }
 
 .navbar-brand {
-    display: flex;
-    align-items: center;
-}
-
-.navbar-brand img {
-    width: 100px; /* Make the profile picture smaller */
-    height: auto;
-    border-radius: 50%;
+    display: none; /* Hide the navbar-brand completely */
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -32,6 +25,7 @@ body {
 .navbar-toggler {
     border: none;
 }
+
 
 /* Profile picture styling */
 .img-profile {
