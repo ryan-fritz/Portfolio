@@ -1,6 +1,10 @@
 # My Personal Website
 
-This is my personal website where I display my interests and accumulated experiences within neuroscience.
+Welcome to my personal website repository! This project showcases my interests and accumulated experiences within neuroscience.
+
+## Overview
+
+This website serves as a platform to highlight my educational background, professional skills, current interests in neuroscience, and a detailed showcase of my projects and experiments.
 
 ## Pages
 
@@ -13,12 +17,31 @@ This is my personal website where I display my interests and accumulated experie
 
 ## Technologies Used
 
-- HTML
-- CSS
-- JavaScript
+- **HTML5**
+- **CSS3**
+- **JavaScript ES6**
 
-## Functionality
+## Features
 
 ### Dynamic Content Loading
 
-The website dynamically loads content for different sections to keep the main page concise and improve performance. This is achieved using JavaScript, which fetches and inserts HTML content into designated placeholders.
+- **Efficient Navigation**: The website dynamically loads content for different sections to keep the main page concise and improve performance.
+- **JavaScript Integration**: Utilizes JavaScript to fetch and insert HTML content into designated placeholders without reloading the entire page.
+
+## Getting Started
+
+To view the website locally on your machine:
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/ryanfritz002/ryanfritz002.github.io.git
+## Contact
+Feel free to reach out for collaborations or inquiries:
+
+Email: rfritz002@gmail.com
+LinkedIn: [Ryan Fritz](https://www.linkedin.com/in/ryan-fritz-9212b9187/)
+Twitter: [@R2Fritz](https://x.com/R2Fritz)
+
+## License
+This project is open-source and available under the MIT License.
