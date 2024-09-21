@@ -36,12 +36,12 @@ To view the website locally on your machine:
 
    ```bash
    git clone https://github.com/ryanfritz002/ryanfritz002.github.io.git
-Contact
+## Contact
 Feel free to reach out for collaborations or inquiries:
 
 Email: rfritz002@gmail.com
 LinkedIn: [Ryan Fritz](https://www.linkedin.com/in/ryan-fritz-9212b9187/)
 Twitter: [@R2Fritz](https://x.com/R2Fritz)
 
-License
+## License
 This project is open-source and available under the MIT License.
