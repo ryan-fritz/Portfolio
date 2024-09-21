@@ -1,108 +1,191 @@
-/* General body styles */
-body {
+/* Variables for Light and Dark Themes */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --bg-color: #ffffff;
+    --text-color: #212529;
+    --link-color: #007bff;
+    --nav-bg-color: #343a40;
+    --nav-text-color: #f8f9fa;
+    --nav-hover-bg-color: #495057;
+  }
+  
+  body.dark-mode {
+    --primary-color: #375a7f;
+    --secondary-color: #444;
+    --bg-color: #1a1a1a;
+    --text-color: #e6e6e6;
+    --link-color: #1e90ff;
+    --nav-bg-color: #1f1f1f;
+    --nav-text-color: #f8f9fa;
+    --nav-hover-bg-color: #333;
+  }
+  
+  /* General Styles */
+  body {
     font-family: 'Muli', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: var(--text-color);
+    background-color: var(--bg-color);
     margin: 0;
-}
-
-/* Navbar styles */
-/* Make the navbar vertical and left-aligned */
-.navbar {
-    width: 200px;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-    background-color: #333;
-    overflow-y: auto; /* Enables scrolling if content exceeds viewport height */
-}
-
-.nav-link {
-    text-align: left;
-    width: 100%;
-    padding: 0.5rem 1rem;
-    color: #f8f9fa; /* Ensure text color is consistent */
-}
-
-.navbar-brand {
-    display: none;
-}
-
-.navbar-toggler {
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    background-color: var(--nav-bg-color);
+    transition: background-color 0.3s;
+  }
+  
+  .navbar .nav-link {
+    color: var(--nav-text-color);
+    transition: color 0.3s, background-color 0.3s;
+  }
+  
+  .navbar .nav-link:hover {
+    background-color: var(--nav-hover-bg-color);
+    color: var(--nav-text-color);
+  }
+  
+  .navbar-brand {
+    color: var(--nav-text-color);
+  }
+  
+  .navbar-toggler {
     border: none;
-}
-
-/* Profile picture styling */
-.img-profile {
-    width: 100px;
-    height: 100px;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28var%28--nav-text-color-rgb%29, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  
+  /* Profile Picture Styling */
+  .img-profile {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-}
-
-/* Section heading styles */
-.resume-section h2, .resume-section h3 {
+  }
+  
+  /* Section Heading Styles */
+  h2, h3 {
+    color: var(--primary-color);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+  }
+  
+  h3 {
     font-size: 2rem;
-    color: #495057;
-}
-
-/* Section content padding */
-.resume-section-content {
-    padding: 1rem 2rem; /* Adjust padding to decrease spacing */
-}
-
-/* Add margin to top of sections to prevent overlap with navbar */
-.resume-section {
-    margin-top: 50px; /* Reduce margin to decrease spacing */
-    margin-bottom: 20px; /* Add margin-bottom to separate sections */
-}
-
-/* Tag Cloud Styles */
-.tagcloud {
+  }
+  
+  /* Section Content */
+  .resume-section {
+    padding: 2rem 0;
+  }
+  
+  .resume-section-content {
+    padding: 1rem 2rem;
+  }
+  
+  /* Links */
+  a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: var(--primary-color);
+  }
+  
+  /* Tag Cloud Styles */
+  .tagcloud {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
   
   .tag {
-    margin: 3px;
-    transition: transform 0.3s;
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
   }
   
   .tag:hover {
+    background-color: var(--link-color);
     transform: scale(1.1);
   }
-
-.tag[data-weight="10"] { font-size: 2rem; }
-.tag[data-weight="9"] { font-size: 1.8rem; }
-.tag[data-weight="8"] { font-size: 1.6rem; }
-.tag[data-weight="7"] { font-size: 1.4rem; }
-.tag[data-weight="6"] { font-size: 1.2rem; }
-.tag[data-weight="5"] { font-size: 1rem; }
-.tag[data-weight="4"] { font-size: 0.9rem; }
-
-
-@media (prefers-reduced-motion) {
-    .tag {
-        transition: none;
-    }
-}
-
-/* Offset for smooth scrolling */
-html, body {
-    scroll-behavior: smooth;
-}
-
-/* Adjusting the spacing for the Interests section */
-.resume-section-content {
-    padding: 1rem; /* Reduce padding to decrease spacing */
-}
-.project-image {
+  
+  .tag[data-weight="10"] { font-size: 1.5rem; }
+  .tag[data-weight="9"]  { font-size: 1.4rem; }
+  .tag[data-weight="8"]  { font-size: 1.3rem; }
+  .tag[data-weight="7"]  { font-size: 1.2rem; }
+  .tag[data-weight="6"]  { font-size: 1.1rem; }
+  .tag[data-weight="5"]  { font-size: 1rem; }
+  .tag[data-weight="4"]  { font-size: 0.9rem; }
+  
+  /* Project Image */
+  .project-image {
     width: 100px;
     height: 100px;
-}
+    border-radius: 10%;
+  }
+  
+  /* Smooth Scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Dark Mode Toggle Switch */
+  .form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  
+  .form-check-label {
+    color: var(--nav-text-color);
+  }
+  
+  /* Social Icons */
+  .social-icons a {
+    color: var(--text-color);
+    margin-right: 15px;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: var(--primary-color);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--nav-bg-color);
+    color: var(--nav-text-color);
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 767px) {
+    .navbar {
+      position: static;
+      width: 100%;
+      height: auto;
+    }
+  
+    .navbar .nav-link {
+      padding: 0.5rem 1rem;
+    }
+  
+    .resume-section-content {
+      padding: 1rem;
+    }
+  }
+  
