@@ -76,9 +76,9 @@
     <!-- Main Content -->
     <div class="container-fluid p-0" style="height: 100vh; display: flex; flex-direction: column; justify-content: center;">
         <section class="resume-section" id="interests">
-            <div class="resume-section-content">
+            <div class="container">
                 <h2 class="mb-3">Current Interests</h2>
-                <div class="tagcloud" id="tagcloud">
+                <div class="tagcloud">
                     <span class="tag" data-weight="10">Cognitive Neuroscience</span>
                     <span class="tag" data-weight="9">Neuroplasticity</span>
                     <span class="tag" data-weight="8">Functional Connectivity</span>
@@ -94,29 +94,43 @@
         </section>
         
         <section class="resume-section" id="favorite-papers">
-            <div class="resume-section-content">
-                <h2 class="mb-3">Top 3 Favorite Papers</h2>
-                
-                <div class="paper">
-                    <div class="paper-title">Distinct Symptom-Specific Treatment Targets for Circuit-Based Neuromodulation</div>
-                    <div class="paper-authors">Authors: Shan H. Siddiqi, et al., Michael D. Fox</div>
-                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8396109/" class="paper-link" target="_blank">Read the full paper</a>
+            <div class="container">
+              <h2 class="mb-3">Top 3 Favorite Papers</h2>
+              <div class="row">
+                <!-- Paper 1 -->
+                <div class="col-md-4">
+                  <div class="card mb-4">
+                    <div class="card-body">
+                      <h5 class="card-title">Distinct Symptom-Specific Treatment Targets for Circuit-Based Neuromodulation</h5>
+                      <p class="card-text"><em>Authors: Shan H. Siddiqi, et al., Michael D. Fox</em></p>
+                      <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8396109/" class="btn btn-primary" target="_blank">Read the full paper</a>
+                    </div>
+                  </div>
                 </div>
-                
-                <div class="paper">
-                    <div class="paper-title">Psilocybin with psychological support for treatment-resistant depression: an open-label feasibility study</div>
-                    <div class="paper-authors">Authors: Robin L Carhart-Harris, et al., David J Nutt</div>
-                    <a href="https://www.thelancet.com/journals/lanpsy/article/PIIS2215-0366(16)30065-7/fulltext?cc=y=" class="paper-link" target="_blank">Read the full paper</a>
+                <!-- Paper 2 -->
+                <div class="col-md-4">
+                  <div class="card mb-4">
+                    <div class="card-body">
+                      <h5 class="card-title">Psilocybin with Psychological Support for Treatment-Resistant Depression: An Open-Label Feasibility Study</h5>
+                      <p class="card-text"><em>Authors: Robin L. Carhart-Harris, et al., David J. Nutt</em></p>
+                      <a href="https://www.thelancet.com/journals/lanpsy/article/PIIS2215-0366(16)30065-7/fulltext?cc=y=" class="btn btn-primary" target="_blank">Read the full paper</a>
+                    </div>
+                  </div>
                 </div>
-                
-                <div class="paper">
-                    <div class="paper-title">Accurate and robust brain image alignment using boundary-based registration</div>
-                    <div class="paper-authors">Authors: Douglas N. Greve, Bruce Fischl</div>
-                    <a href="https://www.sciencedirect.com/science/article/abs/pii/S1053811909006752?via%3Dihub" class="paper-link" target="_blank">Read the full paper</a>
+                <!-- Paper 3 -->
+                <div class="col-md-4">
+                  <div class="card mb-4">
+                    <div class="card-body">
+                      <h5 class="card-title">Accurate and Robust Brain Image Alignment Using Boundary-Based Registration</h5>
+                      <p class="card-text"><em>Authors: Douglas N. Greve, Bruce Fischl</em></p>
+                      <a href="https://www.sciencedirect.com/science/article/abs/pii/S1053811909006752?via%3Dihub" class="btn btn-primary" target="_blank">Read the full paper</a>
+                    </div>
+                  </div>
                 </div>
-                
+              </div>
             </div>
-        </section>
+          </section>
+          
     </div>
 
     <script>
