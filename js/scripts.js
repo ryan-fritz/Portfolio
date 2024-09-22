@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const content = await response.text();
             document.getElementById(placeholderId).innerHTML = content;
         } catch (error) {
-            console.error(error);
+            console.error(`Error loading ${filePath}:`, error);
             document.getElementById(placeholderId).innerHTML = `
                 <div class="alert alert-danger" role="alert">
                     Failed to load content. Please try again later.
