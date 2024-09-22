@@ -3,28 +3,28 @@
    --------------------------- */
    :root {
     /* Light Theme Variables */
-    --primary-color: #0d6efd;
-    --secondary-color: #6c757d;
-    --bg-color: #ffffff;
-    --text-color: #212529;
-    --nav-bg-color: #343a40;
-    --nav-text-color: #f8f9fa;
-    --link-color: #0d6efd;
-    --footer-bg-color: #343a40;
-    --footer-text-color: #f8f9fa;
+    --primary-color: #4a90e2; /* Softer blue */
+    --secondary-color: #7a7a7a; /* Neutral gray */
+    --bg-color: #f4f4f9; /* Light gray background */
+    --text-color: #333333; /* Darker text for better contrast */
+    --nav-bg-color: #2c3e50; /* Darker nav background */
+    --nav-text-color: #ecf0f1; /* Lighter nav text */
+    --link-color: #4a90e2; /* Softer blue for links */
+    --footer-bg-color: #2c3e50; /* Darker footer background */
+    --footer-text-color: #ecf0f1; /* Lighter footer text */
 }
 
 .dark-mode {
     /* Dark Theme Variables */
-    --primary-color: #0d6efd;
-    --secondary-color: #adb5bd;
-    --bg-color: #121212;
-    --text-color: #e6e6e6;
-    --nav-bg-color: #212529;
-    --nav-text-color: #f8f9fa;
-    --link-color: #1e90ff;
-    --footer-bg-color: #212529;
-    --footer-text-color: #f8f9fa;
+    --primary-color: #4a90e2; /* Softer blue */
+    --secondary-color: #8a8a8a; /* Neutral gray */
+    --bg-color: #1e1e1e; /* Slightly lighter dark background */
+    --text-color: #dcdcdc; /* Softer white text */
+    --nav-bg-color: #2c3e50; /* Darker nav background */
+    --nav-text-color: #ecf0f1; /* Lighter nav text */
+    --link-color: #4a90e2; /* Softer blue for links */
+    --footer-bg-color: #2c3e50; /* Darker footer background */
+    --footer-text-color: #ecf0f1; /* Lighter footer text */
 }
 
 /* ---------------------------
