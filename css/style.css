@@ -45,6 +45,7 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
     color: var(--primary-color);
     transition: color 0.3s;
+    text-align: center;
 }
 
 p.lead {
@@ -103,8 +104,13 @@ p.lead {
     padding: 4rem 0;
 }
 
-.resume-section.bg-light, .dark-mode .resume-section {
+.resume-section.bg-light {
     background-color: var(--bg-color);
+}
+
+.dark-mode .resume-section {
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .resume-section .container {
@@ -165,10 +171,13 @@ p.lead {
     transform: scale(1.05);
 }
 
-.projects .card, .dark-mode .projects .card {
+.projects .card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.dark-mode .projects .card {
     background-color: var(--bg-color);
     color: var(--text-color);
-    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .projects .card:hover {
@@ -231,4 +240,26 @@ footer a:hover {
 /* ---------------------------
    Responsive Adjustments
    --------------------------- */
-@media (max-width:767.98px){.profile-pic{width:120px;height:120px}.navbar .nav-link{margin-right:0;margin-bottom:0.5rem}.navbar .form-check{margin-top:0.5rem}.resume-section{padding:3rem 0}.resume-section .container{max-width:100%}}
+@media (max-width:767.98px) {
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+    .navbar .nav-link {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+    .navbar .form-check {
+        margin-top: 0.5rem;
+    }
+    .resume-section {
+        padding: 3rem 0;
+    }
+    .resume-section .container {
+        max-width: 100%;
+    }
+    .dark-mode .resume-section {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+    }
+}
