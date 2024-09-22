@@ -7,7 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Assign random colors
     tags.forEach(tag => {
-        tag.style.color = `#${Math.floor(Math.random() * 0xFFFFFF).toString(16).padStart(6, '0')}`;
+        tag.style.color = getRandomColor();
     });
 });
+
+function getRandomColor() {
+    return `#${Math.floor(Math.random() * 0xFFFFFF).toString(16).padStart(6, '0')}`;
+}
   

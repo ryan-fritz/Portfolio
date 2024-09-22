@@ -10,11 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     const loadSection = ({ id, url }) => {
-        fetch(url)
-            .then(response => {
-                if (!response.ok) throw new Error(`Failed to load ${url}`);
-                return response.text();
-            })
+        fetchContent(url)
             .then(data => {
                 document.getElementById(id).innerHTML = data;
                 if (id === 'nav-placeholder') initializeNavbarScripts();
@@ -26,6 +22,14 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     sections.forEach(loadSection);
+
+    const fetchContent = (url) => {
+        return fetch(url)
+            .then(response => {
+                if (!response.ok) throw new Error(`Failed to load ${url}`);
+                return response.text();
+            });
+    };
 
     const initializeNavbarScripts = () => {
         const navbarToggler = document.querySelector('.navbar-toggler');
