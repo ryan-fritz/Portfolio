@@ -103,7 +103,7 @@ p.lead {
     padding: 4rem 0;
 }
 
-.resume-section.bg-light {
+.resume-section.bg-light, .dark-mode .resume-section {
     background-color: var(--bg-color);
 }
 
@@ -146,7 +146,7 @@ p.lead {
     color: var(--primary-color);
 }
 
-.education-details p.text-muted {
+.education-details p.text-muted, .dark-mode .education-details p.text-muted {
     color: var(--secondary-color);
 }
 
@@ -165,7 +165,9 @@ p.lead {
     transform: scale(1.05);
 }
 
-.projects .card {
+.projects .card, .dark-mode .projects .card {
+    background-color: var(--bg-color);
+    color: var(--text-color);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
