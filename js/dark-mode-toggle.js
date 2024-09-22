@@ -1,20 +1,22 @@
 // dark-mode-toggle.js
 document.addEventListener('DOMContentLoaded', () => {
-    const toggleSwitch = document.getElementById('darkModeToggle');
-    const currentTheme = localStorage.getItem('theme');
-    if (currentTheme) applyTheme(currentTheme);
-    if (toggleSwitch) toggleSwitch.addEventListener('change', toggleDarkMode);
+    const toggleSwitch = document.createElement('button');
+    toggleSwitch.textContent = ' Dark Mode';
+    Object.assign(toggleSwitch.style, {
+        position: 'fixed',
+        top: '80px',
+        right: '20px',
+        zIndex: 1001
+    });
+    document.body.appendChild(toggleSwitch);
+
+    toggleSwitch.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('dark-mode', document.body.classList.contains('dark-mode'));
+    });
+
+    if (localStorage.getItem('dark-mode') === 'true') {
+        document.body.classList.add('dark-mode');
+    }
 });
-
-const applyTheme = (theme) => {
-    document.body.classList.toggle('dark-mode', theme === 'dark');
-    const toggleSwitch = document.getElementById('darkModeToggle');
-    if (toggleSwitch) toggleSwitch.checked = (theme === 'dark');
-};
-
-const toggleDarkMode = () => {
-    const theme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
-    applyTheme(theme);
-    localStorage.setItem('theme', theme);
-};
   
