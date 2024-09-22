@@ -3,7 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleSwitch = document.getElementById('darkModeToggle');
     const currentTheme = localStorage.getItem('theme');
 
-    applyTheme(currentTheme);
+    if (currentTheme) {
+        applyTheme(currentTheme);
+    }
 
     if (toggleSwitch) {
         toggleSwitch.addEventListener('change', () => {
