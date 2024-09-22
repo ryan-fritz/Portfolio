@@ -145,33 +145,50 @@ p.lead {
 }
 
 /* ---------------------------
-   Education Section
+   Section Styles
    --------------------------- */
-.edu-logo {
-    max-width: 100px;
-    height: auto;
-    transition: filter 0.3s;
+.section-card {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-.dark-mode .edu-logo {
-    filter: brightness(0.8); /* Adjust brightness for dark mode */
+.dark-mode .section-card {
+    background-color: #333;
+    color: var(--text-color);
+    border-color: #444;
 }
 
-.education-details h4, .education-details h5 {
+.section-title {
     color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
-.dark-mode .education-details .card {
-    background-color: #333; /* Darker card background */
-    border-color: #444; /* Darker border */
-}
-
-.education-details p.text-muted {
+.section-text-muted {
     color: var(--secondary-color);
 }
 
-.dark-mode .education-details p.text-muted {
-    color: #b0b0b0; /* Lighter muted text for dark mode */
+.dark-mode .section-text-muted {
+    color: #b0b0b0;
+}
+
+.edu-logo, .project-image {
+    max-width: 100px;
+    height: auto;
+    transition: filter 0.3s, transform 0.3s;
+}
+
+.dark-mode .edu-logo, .dark-mode .project-image {
+    filter: brightness(0.8);
+}
+
+.projects .card:hover .project-image, .education-details .card:hover .edu-logo {
+    transform: scale(1.05);
 }
 
 /* ---------------------------
