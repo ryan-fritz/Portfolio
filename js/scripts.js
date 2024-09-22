@@ -41,10 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
      * Function to initialize Dark Mode functionality.
      */
     const initializeDarkMode = () => {
-        const toggleSwitch = document.getElementById('darkModeToggle');
-        const currentTheme = localStorage.getItem('theme');
+        const toggleSwitch = document.querySelector('.form-check-input');
+        const currentTheme = localStorage.getItem('dark-mode');
 
-        if (currentTheme === 'dark') {
+        if (currentTheme === 'true') {
             document.body.classList.add('dark-mode');
             if (toggleSwitch) toggleSwitch.checked = true;
         }
@@ -52,11 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (toggleSwitch) {
             toggleSwitch.addEventListener('change', () => {
                 document.body.classList.toggle('dark-mode');
-                let theme = 'light';
-                if (document.body.classList.contains('dark-mode')) {
-                    theme = 'dark';
-                }
-                localStorage.setItem('theme', theme);
+                const isDarkMode = document.body.classList.contains('dark-mode');
+                localStorage.setItem('dark-mode', isDarkMode);
             });
         }
     };
