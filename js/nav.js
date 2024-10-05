@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // Initialize smooth scrolling and active link highlighting
             initializeNavFeatures();
-        });
+        })
+        .catch(error => console.error('Error loading navbar:', error));
 });
 
 function initializeNavFeatures() {

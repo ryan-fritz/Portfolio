@@ -65,6 +65,7 @@ p.lead {
     display: flex;
     justify-content: center; /* Ensure navbar content is centered */
     align-items: center;
+    text-align: center; /* Ensure text is centered */
 }
 
 .navbar .navbar-brand {
