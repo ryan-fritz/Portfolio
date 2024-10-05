@@ -57,7 +57,7 @@ p.lead {
    Navbar Styles
    --------------------------- */
 .navbar {
-    background-color: var(--nav-bg-color);
+    background-color: transparent;
     transition: background-color 0.3s;
     font-family: 'Poppins', 'Helvetica Neue', sans-serif;
     font-size: 1rem;
