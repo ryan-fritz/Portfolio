@@ -71,11 +71,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Load all sections first
     loadAllSections().then(() => {
-       
         // Initialize Smooth Scrolling after all sections are loaded
         initializeSmoothScrolling();
         // Highlight the active page
         const currentPath = window.location.pathname.split('/').pop();
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
         navLinks.forEach(link => {
             const linkPath = link.getAttribute('href');
             if (linkPath === currentPath) {
