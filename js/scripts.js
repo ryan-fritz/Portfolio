@@ -38,27 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     /**
-     * Function to initialize Dark Mode functionality.
-     */
-    const initializeDarkMode = () => {
-        const toggleSwitch = document.querySelector('.form-check-input');
-        const currentTheme = localStorage.getItem('dark-mode');
-
-        if (currentTheme === 'true') {
-            document.body.classList.add('dark-mode');
-            if (toggleSwitch) toggleSwitch.checked = true;
-        }
-
-        if (toggleSwitch) {
-            toggleSwitch.addEventListener('change', () => {
-                document.body.classList.toggle('dark-mode');
-                const isDarkMode = document.body.classList.contains('dark-mode');
-                localStorage.setItem('dark-mode', isDarkMode);
-            });
-        }
-    };
-
-    /**
+  
      * Function to initialize Smooth Scrolling for navigation links.
      */
     const initializeSmoothScrolling = () => {
@@ -91,9 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Load all sections first
     loadAllSections().then(() => {
-        // Initialize Dark Mode after all sections are loaded
-        initializeDarkMode();
-
+       
         // Initialize Smooth Scrolling after all sections are loaded
         initializeSmoothScrolling();
     });
