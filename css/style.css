@@ -62,7 +62,7 @@ p.lead {
     font-family: 'Poppins', 'Helvetica Neue', sans-serif;
     font-size: 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center the navbar content */
     align-items: center;
 }
 
