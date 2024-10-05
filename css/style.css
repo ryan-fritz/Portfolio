@@ -14,23 +14,10 @@
     --footer-text-color: #ecf0f1; /* Lighter footer text */
 }
 
-.dark-mode {
-    /* Dark Theme Variables */
-    --primary-color: #4a90e2; /* Softer blue */
-    --secondary-color: #8a8a8a; /* Neutral gray */
-    --bg-color: #1e1e1e; /* Slightly lighter dark background */
-    --text-color: #dcdcdc; /* Softer white text */
-    --nav-bg-color: #2c3e50; /* Darker nav background */
-    --nav-text-color: #ecf0f1; /* Lighter nav text */
-    --link-color: #4a90e2; /* Softer blue for links */
-    --footer-bg-color: #2c3e50; /* Darker footer background */
-    --footer-text-color: #ecf0f1; /* Lighter footer text */
-}
-
 /* ---------------------------
    General Styles
    --------------------------- */
-body, .dark-mode {font-family:'Muli',sans-serif;line-height:1.6;color:var(--text-color);background-color:var(--bg-color);margin:0;transition:background-color .3s ease,color .3s ease;}
+body {font-family:'Muli',sans-serif;line-height:1.6;color:var(--text-color);background-color:var(--bg-color);margin:0;transition:background-color .3s ease,color .3s ease;}
 
 a {
     color: var(--link-color);
