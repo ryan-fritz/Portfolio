@@ -53,7 +53,8 @@ p.lead {
 .navbar {
     position: fixed;
     top: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
     z-index: 1000;
     background-color: var(--nav-bg-color);
     padding: 0.5rem 1rem;
