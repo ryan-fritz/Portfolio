@@ -59,6 +59,12 @@ p.lead {
 .navbar {
     background-color: var(--nav-bg-color);
     transition: background-color 0.3s;
+    font-family: 'Poppins', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
 }
 
 .navbar .navbar-brand {
@@ -70,15 +76,18 @@ p.lead {
     color: var(--nav-text-color);
     margin-right: 1rem;
     transition: color 0.3s, background-color 0.3s;
-}
-
-.navbar .nav-link:hover {
-    background-color: var(--secondary-color);
+    padding: 0.5rem 1rem;
     border-radius: 5px;
 }
 
-.navbar .form-check-label {
-    color: var(--nav-text-color);
+.navbar .nav-link:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.navbar .nav-link.active {
+    background-color: #4a90e2;
+    color: #fff;
 }
 
 /* ---------------------------
@@ -275,7 +284,17 @@ footer a:hover {
 /* ---------------------------
    Responsive Adjustments
    --------------------------- */
-@media (max-width:767.98px) {
+@media (max-width: 767.98px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar .nav-link {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+        width: 100%;
+        text-align: left;
+    }
     .profile-pic {
         width: 120px;
         height: 120px;
