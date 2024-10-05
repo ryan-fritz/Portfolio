@@ -83,15 +83,17 @@ p.lead {
 }
 
 .navbar .nav-link:hover {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: #fff;
-    border-color: var(--primary-color);
+    border-color: var(--secondary-color);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .navbar .nav-link.active {
     background-color: var(--link-color);
     color: #fff;
     border-color: var(--link-color);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 /* ---------------------------
