@@ -96,6 +96,39 @@ p.lead {
     transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
+ul.nav li a {
+    display: block;
+    padding: 7px;
+    padding-left: 22px;
+    margin-left: -22px;
+    width: 12rem;
+}
+
+ul.nav li a:hover {
+    background-color: #f8f8f8;
+}
+
+ul.nav li a.is-active {
+    background-color: #f1f1f1;
+}
+
+li a {
+    transition: background-color 0.2s ease;
+}
+
+.menu li {
+    transition: background-color 0.2s ease;
+}
+
+div.top-bar li.active a {
+    background-color: #21465e;
+    color: #e4e3e3;
+}
+
+div.top-bar li:hover {
+    background-color: #1a3548;
+}
+
 /* ---------------------------
    Profile Picture
    --------------------------- */
