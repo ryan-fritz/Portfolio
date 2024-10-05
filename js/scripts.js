@@ -74,5 +74,15 @@ document.addEventListener('DOMContentLoaded', () => {
        
         // Initialize Smooth Scrolling after all sections are loaded
         initializeSmoothScrolling();
+        // Highlight the active page
+        const currentPath = window.location.pathname.split('/').pop();
+        navLinks.forEach(link => {
+            const linkPath = link.getAttribute('href');
+            if (linkPath === currentPath) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
     });
 });
