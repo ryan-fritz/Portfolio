@@ -73,9 +73,9 @@ p.lead {
 
 .navbar .nav-link {
     color: var(--nav-text-color);
-    margin: 0 0.5rem;
-    transition: color 0.3s, background-color 0.3s;
-    padding: 0.75rem 1.5rem;
+    margin: 0 0.75rem;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    padding: 1rem 2rem;
     border-radius: 8px;
     border: 2px solid transparent;
     display: inline-block;
@@ -86,14 +86,14 @@ p.lead {
     background-color: var(--secondary-color);
     color: #fff;
     border-color: var(--secondary-color);
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .navbar .nav-link.active {
     background-color: var(--link-color);
     color: #fff;
     border-color: var(--link-color);
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 /* ---------------------------
