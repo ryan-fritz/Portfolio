@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
      * Function to load all HTML sections.
      */
     const loadAllSections = async () => {
+        await loadHTML('nav-placeholder', 'nav.html');
         await Promise.all([
-            loadHTML('nav-placeholder', 'nav.html'),
             loadHTML('about-placeholder', 'about.html'),
             loadHTML('education-placeholder', 'education.html'),
             loadHTML('projects-placeholder', 'projects.html'),
