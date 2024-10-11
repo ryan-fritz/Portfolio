@@ -141,20 +141,34 @@ div.top-bar li:hover {
 /* ---------------------------
    Profile Picture
    --------------------------- */
+.grid-x {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+}
+
+.cell {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    flex: 1;
+}
+
 .profile-pic {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
     object-fit: cover;
-    border-radius: 0; /* Square shape */
-    float: left; /* Align left */
-    margin-right: 20px;
+    border-radius: 0;
+    margin-bottom: 1rem;
 }
 
 .profile-text {
     text-align: center;
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
+    flex-direction: column;
 }
 
 /* ---------------------------
@@ -176,6 +190,25 @@ div.top-bar li:hover {
 .resume-section p.lead {
     font-size: 1.25rem;
     text-align: center;
+}
+
+.profile-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-section .cell {
+    flex: 1 1 100%;
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .profile-section .cell {
+        flex: 1;
+        max-width: 50%;
+    }
 }
 
 /* ---------------------------
