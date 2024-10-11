@@ -238,7 +238,7 @@ div.top-bar li:hover {
 
 .social-icons {
     display: flex;
-    justify-content: center; /* Center icons horizontally */
+    justify-content: flex-start; /* Align icons with text */
     margin-top: 10px; /* Adjust margin for spacing */
 }
 
