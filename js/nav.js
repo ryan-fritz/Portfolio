@@ -22,7 +22,15 @@ function initializeNavFeatures() {
         });
     });
 
-    // Highlight active link
+    // Highlight active link based on current page
+    const currentPath = window.location.pathname.split('/').pop();
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+        }
+    });
+
+    // Highlight active link based on scroll position
     window.addEventListener('scroll', () => {
         let current = '';
         navLinks.forEach(link => {
