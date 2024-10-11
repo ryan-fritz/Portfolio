@@ -173,6 +173,12 @@ div.top-bar li:hover {
     margin-bottom: 1rem;
 }
 
+@media (max-width: 767px) {
+    .profile-pic {
+        margin-top: -10px; /* Adjust top margin for smaller screens */
+    }
+}
+
 .profile-text {
     text-align: center;
     display: flex;
