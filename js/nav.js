@@ -22,21 +22,13 @@ function initializeNavFeatures() {
         });
     });
 
-    // Highlight active link based on current page and scroll position
+    // Highlight active link based on current page URL
     const highlightActiveLink = () => {
         const currentPath = window.location.pathname.split('/').pop();
-        let current = currentPath;
-
-        navLinks.forEach(link => {
-            const section = document.querySelector(link.getAttribute('href'));
-            if (section && section.offsetTop <= window.scrollY + 100) {
-                current = link.getAttribute('href');
-            }
-        });
 
         navLinks.forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href') === current) {
+            if (link.getAttribute('href') === currentPath) {
                 link.classList.add('active');
             }
         });
