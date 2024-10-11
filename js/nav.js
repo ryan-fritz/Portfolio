@@ -22,28 +22,29 @@ function initializeNavFeatures() {
         });
     });
 
-    // Highlight active link based on current page
-    const currentPath = window.location.pathname.split('/').pop();
-    navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPath) {
-            link.classList.add('active');
-        }
-    });
+    // Highlight active link based on current page and scroll position
+    const highlightActiveLink = () => {
+        const currentPath = window.location.pathname.split('/').pop();
+        let current = currentPath;
 
-    // Highlight active link based on scroll position
-    window.addEventListener('scroll', () => {
-        let current = '';
         navLinks.forEach(link => {
             const section = document.querySelector(link.getAttribute('href'));
-            if (section.offsetTop <= window.scrollY + 100) {
+            if (section && section.offsetTop <= window.scrollY + 100) {
                 current = link.getAttribute('href');
             }
         });
+
         navLinks.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href') === current) {
                 link.classList.add('active');
             }
         });
-    });
+    };
+
+    // Initial highlight on page load
+    highlightActiveLink();
+
+    // Update highlight on scroll
+    window.addEventListener('scroll', highlightActiveLink);
 }
