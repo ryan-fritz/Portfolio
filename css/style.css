@@ -217,11 +217,16 @@ div.top-bar li:hover {
 .social-icons a {
     color: var(--text-color);
     margin-right: 15px;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s;
+    font-size: 1.5rem; /* Adjust size for consistency */
+    padding: 10px; /* Ensure consistent padding */
+    display: inline-block;
+    text-align: center;
 }
 
 .social-icons a:hover {
     color: var(--link-color);
+    transform: scale(1.1); /* Add hover effect */
 }
 
 /* ---------------------------
