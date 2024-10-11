@@ -36,7 +36,4 @@ function initializeNavFeatures() {
 
     // Initial highlight on page load
     highlightActiveLink();
-
-    // Update highlight on scroll
-    window.addEventListener('scroll', highlightActiveLink);
 }
