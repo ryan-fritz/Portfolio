@@ -226,12 +226,20 @@ div.top-bar li:hover {
    --------------------------- */
 .social-icons a {
     color: var(--text-color);
-    margin-right: 15px;
+    margin-right: 10px;
     transition: color 0.3s, transform 0.3s;
-    font-size: 1.5rem; /* Adjust size for consistency */
-    padding: 10px; /* Ensure consistent padding */
+    font-size: 1.25rem; /* Decrease size for smaller icons */
+    padding: 5px; /* Adjust padding for smaller icons */
     display: inline-block;
     text-align: center;
+    width: 20px; /* Set width for consistent sizing */
+    height: 20px; /* Set height for consistent sizing */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center icons horizontally */
+    margin-top: 10px; /* Adjust margin for spacing */
 }
 
 .social-icons a:hover {
