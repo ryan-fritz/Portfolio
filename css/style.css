@@ -168,13 +168,17 @@ div.top-bar li:hover {
     object-fit: cover;
     border-radius: 0;
     margin-top: -20px;
-    margin-left: -15px;
     margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media (max-width: 767px) {
     .profile-pic {
         margin-top: -10px; /* Adjust top margin for smaller screens */
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
